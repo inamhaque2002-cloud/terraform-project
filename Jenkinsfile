@@ -12,7 +12,7 @@ pipeline {
     stage('Checkout Code') {
       steps {
         git branch: 'main', 
-            url: 'https://github.com/ak2104/Fundamentals-of-Terraform-with-Jenkins-Terraform-CI-CD-and-Remote-Backend-Azure-.git'
+            url: 'https://github.com/inamhaque2002-cloud/terraform-project.git'
       }
     }
 
