@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name  = "AamirTFState-RG"
-    storage_account_name = "aamirtfstatestorage"  // Use your unique name
-    container_name       = "terraform-state"
+    resource_group_name  = "inam-tfsatate-rg"
+    storage_account_name = "inamstorage1234"  // Use your unique name
+    container_name       = "inamcontainer1234"
     key                  = "jenkins-demo.tfstate"
   }
 }
@@ -23,12 +23,12 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = "InamJenkinsTerraformRG2"
+  name     = "InamJenkinsTerraformRG5"
   location = "East US"
 }
 
 resource "azurerm_virtual_network" "vnet" {
-  name                = "InamJenkinsVNet2"
+  name                = "InamJenkinsVNet5"
   address_space       = ["10.10.0.0/16"]
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
